@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ranking de Jogadores</title>
+  <title>🏆 Ranking de Jogadores</title>
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>🏆 Ranking</h1>
+    <h1>🏆 Ranking de Jogadores</h1>
 
-    <!-- Tabela com os dados dos jogadores -->
+    <!-- Tabela de histórico -->
     <table>
       <thead>
         <tr>
@@ -20,19 +20,18 @@
           <th>Data</th>
         </tr>
       </thead>
-      <tbody id="tabela-historico"></tbody>
+      <tbody id="lista-historico"></tbody>
     </table>
 
-    <button onclick="window.location.href='index.html'">Voltar</button>
+    <button onclick="window.location.href='tema.html'">Voltar ao Início</button>
   </div>
 
-  <!-- Script que carrega os dados do ranking -->
   <script>
     const historico = JSON.parse(localStorage.getItem("historicoJogadores")) || [];
-    const tabela = document.getElementById("tabela-historico");
+    const corpoTabela = document.getElementById("lista-historico");
 
     if (historico.length === 0) {
-      tabela.innerHTML = `<tr><td colspan="4">Nenhum jogador registrado 😢</td></tr>`;
+      corpoTabela.innerHTML = `<tr><td colspan="4">Nenhum registro disponível 😢</td></tr>`;
     } else {
       historico.forEach(jogador => {
         const linha = document.createElement("tr");
@@ -42,7 +41,7 @@
           <td>${jogador.pontuacao} / ${jogador.total}</td>
           <td>${jogador.data}</td>
         `;
-        tabela.appendChild(linha);
+        corpoTabela.appendChild(linha);
       });
     }
   </script>
