@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Perguntas</h1> <!-- Título da tela -->
+
+    <!-- Campo para o jogador digitar seu nome -->
+    <label for="nome">Seu nome:</label>
+    <input type="text" id="nome" placeholder="Digite aqui..." />
+
+    <!-- Placar atualizado a cada acerto -->
+    <div id="placar">Placar: 0 ponto(s)</div>
+
+    <!-- Local onde aparecerão as perguntas e respostas -->
+    <div id="quiz"></div>
+
+    <!-- Resultado final depois das perguntas -->
+    <div id="resultado"></div>
+
+    <!-- Botão para voltar para index -->
+    <button onclick="window.location.href='index.html'">Voltar</button>
+  </div>
+
+  <script src="JS/quiz.js"></script> <!-- Arquivo JS com lógica do jogo -->
+</body>
+</html>

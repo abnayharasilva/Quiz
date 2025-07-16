@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ranking de Jogadores</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🏆 Ranking</h1>
+
+    <!-- Tabela com os dados dos jogadores -->
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Tema</th>
+          <th>Pontos</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-historico"></tbody>
+    </table>
+
+    <button onclick="window.location.href='index.html'">Voltar</button>
+  </div>
+
+  <!-- Script que carrega os dados do ranking -->
+  <script>
+    const historico = JSON.parse(localStorage.getItem("historicoJogadores")) || [];
+    const tabela = document.getElementById("tabela-historico");
+
+    if (historico.length === 0) {
+      tabela.innerHTML = `<tr><td colspan="4">Nenhum jogador registrado 😢</td></tr>`;
+    } else {
+      historico.forEach(jogador => {
+        const linha = document.createElement("tr");
+        linha.innerHTML = `
+          <td>${jogador.nome}</td>
+          <td>${jogador.tema}</td>
+          <td>${jogador.pontuacao} / ${jogador.total}</td>
+          <td>${jogador.data}</td>
+        `;
+        tabela.appendChild(linha);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+/* 🧼 Reset básico para melhor controle visual */
+* {
+  box-sizing: border-box; /* Mantém o layout consistente */
+  transition: all 0.3s ease-in-out; /* Suaviza animações */
+}
+
+/* 🌈 Estilo global do corpo da página */
+body {
+  font-family: 'Segoe UI', sans-serif; /* Fonte moderna */
+  background: linear-gradient(120deg, #f6d365, #fda085); /* Fundo com degrade */
+  margin: 0;
+  padding: 40px;
+  color: #333;
+}
+
+/* 📦 Container central das páginas */
+.container {
+  max-width: 720px;
+  margin: auto;
+  background: #ffffffde; /* Fundo branco translúcido */
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+  backdrop-filter: blur(10px); /* Efeito de desfoque de fundo */
+}
+
+/* 📝 Títulos principais */
+h1 {
+  text-align: center;
+  font-size: 2.4em;
+  color: #ff5722; /* Cor chamativa */
+  margin-bottom: 30px;
+}
+
+/* 🧑 Labels de campos */
+label {
+  font-weight: bold;
+  display: block;
+  margin: 15px 0 5px;
+  color: #444;
+}
+
+/* 🔤 Campos de texto e menu de seleção */
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  border: 2px solid #ff5722;
+  border-radius: 12px;
+  background-color: #fffdf7;
+  margin-bottom: 20px;
+}
+
+input:focus,
+select:focus {
+  border-color: #ff8a65;
+  box-shadow: 0 0 8px rgba(255, 138, 101, 0.5);
+}
+
+/* 📊 Placar e resultado final */
+#placar,
+#resultado {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #e64a19;
+  margin: 20px 0;
+}
+
+/* ❓ Perguntas destacadas */
+.pergunta p,
+#quiz p {
+  background-color: #fff3e0;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Estilo das alternativas */
+label input[type="radio"] {
+  margin-right: 8px;
+}
+
+label {
+  background-color: #fff9f0;
+  padding: 10px;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+label:hover {
+  background-color: #ffe3c5;
+}
+
+/* 🚀 Botões gerais */
+button {
+  background: linear-gradient(135deg, #ff7043, #ff8a65);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-size: 1.1em;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 25px auto 0;
+  display: block;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff8a65, #ff7043);
+}
+
+/* 📋 Tabela do histórico */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+table th {
+  background-color: #ff5722;
+  color: white;
+  font-weight: bold;
+}
+
+table td {
+  background-color: #fff3e0;
+}
+
+/* 📱 Estilo responsivo para telas menores */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 12px 20px;
+  }
+
+  table th, table td {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+}

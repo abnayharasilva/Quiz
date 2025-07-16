@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" /> <!-- Define o conjunto de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsivo para mobile -->
+  <title>Escolha o Tema</title> <!-- Título da aba -->
+  <link rel="stylesheet" href="CSS/style.css" /> <!-- Conecta a folha de estilos -->
+</head>
+<body>
+  <div class="container"> <!-- Div principal com padding e layout centralizado -->
+    <h1>🎓 Quiz Interativo</h1> <!-- Título da página -->
+
+    <!-- Menu para selecionar tema -->
+    <label for="tema">Selecione o tema:</label>
+    <select id="tema">
+      <!-- Cada opção corresponde a um tema do quiz.js -->
+      <option value="cultura">🌍 Cultura</option>
+      <option value="ciencia">🔬 Ciência</option>
+      <option value="filmes">🎬 Filmes</option>
+      <option value="arteLiteratura">🖼️ Arte e Literatura</option>
+      <option value="meioAmbiente">🌱 Meio Ambiente</option>
+      <option value="esportes">⚽ Esportes</option>
+    </select>
+
+    <!-- Botões para iniciar o quiz e ver o ranking -->
+    <button onclick="redirecionar()">Iniciar Quiz</button>
+    <button onclick="window.location.href='historico.html'">Ver Ranking</button>
+  </div>
+
+  <script src="JS/tema.js"></script> <!-- Arquivo JS para redirecionamento -->
+</body>
+</html>
