@@ -23,16 +23,20 @@
       <tbody id="lista-historico"></tbody>
     </table>
 
-    <button onclick="window.location.href='tema.html'">Voltar ao Início</button>
+    <!-- Botão para voltar à página inicial -->
+    <a href="index.html"><button>Voltar ao Início</button></a>
   </div>
 
   <script>
+    // Recupera histórico do localStorage
     const historico = JSON.parse(localStorage.getItem("historicoJogadores")) || [];
     const corpoTabela = document.getElementById("lista-historico");
 
+    // Se não houver registros
     if (historico.length === 0) {
       corpoTabela.innerHTML = `<tr><td colspan="4">Nenhum registro disponível 😢</td></tr>`;
     } else {
+      // Adiciona cada jogador à tabela
       historico.forEach(jogador => {
         const linha = document.createElement("tr");
         linha.innerHTML = `
